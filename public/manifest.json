@@ -4,10 +4,11 @@
     "version": "1.0.0",
     "description": "View history as a graph view",
     "background": {
-      "service_worker": "background.js"
+        "service_worker": "background.js"
     },
     "action": {
-      "default_popup": "index.html"
+        "default_popup": "index.html"
     },
-    "permissions": ["tabs"]
-  }
+    "host_permissions": ["<all_urls>"],
+    "permissions": ["scripting", "tabs", "activeTab", "storage"]
+}

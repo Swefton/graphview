@@ -31,7 +31,8 @@ const App = () => {
         linkDirectionalArrowRelPos={1}
         nodeLabel={(node) => node.name}
         nodeCanvasObject={(node, ctx) => {
-          const label = node.name;
+          let label = node.name;
+          if (node.label != "3141_temp_label") label = node.label;
           const fontSize = 8;
           ctx.font = `${fontSize}px Sans-Serif`;
           ctx.fillStyle = "white";
